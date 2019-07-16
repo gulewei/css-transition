@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .anim-fadein-active {
+            animation: fadein .3s ease-in;
+        }
+
+        .anim-fadeout-active {
+            animation: fadeout .3s ease-out;
+        }
+
+        .dialog {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- example for usage -->
+    <button id="button">dialog</button>
+    <div id="dialog" class="dialog" style="display: none">I'm Dialog</div>
+    <script src="./app.ts"></script>
+</body>
+
+</html>
